@@ -3,12 +3,13 @@ Summary(pl):	Uk³adanka - tangramy
 Name:		gtans
 Version:	1.2
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gtans/%{name}-%{version}.tar.gz
 # Source0-md5:	067d8bd1d5534b39316bdb4e689a6c40
 Source1:	%{name}.desktop
 URL:		http://gtans.sourceforge.net/
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS
+%doc AUTHORS HISTORY
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man6/*
 %dir %{_datadir}
@@ -69,4 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_datadir}/gtanshelpru.txt
 %lang(uk) %{_datadir}/gtanshelpuk.txt
 %{_pixmapsdir}/%{name}.png
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
