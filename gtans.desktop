@@ -7,5 +7,5 @@ Exec=gtans
 Terminal=false
 Type=Application
 Encoding=UTF-8
-Categories=Game;
+Categories=GTK;Game;LogicGame;
 # vi: encoding=utf-8
