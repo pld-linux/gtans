@@ -1,12 +1,12 @@
 Summary:	Tangram puzzle
 Summary(pl):	Uk³adanka - tangramy
 Name:		gtans
-Version:	1.1
-Release:	1
+Version:	1.2
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gtans/%{name}-%{version}.tar.gz
-# Source0-md5:	ac8ee854f8f9c2e36ced43f18b255d51
+# Source0-md5:	067d8bd1d5534b39316bdb4e689a6c40
 Source1:	%{name}.desktop
 Source2:	http://gtans.sourceforge.net/alpha.figures.gz
 # Source2-md5:	4fa32231e56d778f4e0e926ba77c9437
@@ -58,18 +58,20 @@ mv -f m.new Makefile
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games,%{_mandir}/man6}
 
 cat makefile | sed 's@/%{_prefix}@%$(DESTDIR)%{_prefix}/@' > m.new
 mv -f m.new makefile
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mkdir $RPM_BUILD_ROOT/usr/share
-mv -f $RPM_BUILD_ROOT%{_prefix}/share/locale $RPM_BUILD_ROOT/usr/share/
+#mkdir $RPM_BUILD_ROOT/usr/share
+#mv -f $RPM_BUILD_ROOT%{_prefix}/share/locale $RPM_BUILD_ROOT/usr/share/
 
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/figures
-gunzip $RPM_BUILD_ROOT%{_datadir}/figures/*.gz
+#gunzip -f $RPM_BUILD_ROOT%{_datadir}/figures/*.gz
+
+mv -f $RPM_BUILD_ROOT/usr/man/man6/* $RPM_BUILD_ROOT%{_mandir}/man6
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install misc/gtans_icon.png $RPM_BUILD_ROOT%{_pixmapsdir}/gtans.png
