@@ -5,7 +5,7 @@ Version:	1.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://download.sourceforge.net/gtans/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/gtans/%{name}-%{version}.tar.gz
 # Source0-md5:	ac8ee854f8f9c2e36ced43f18b255d51
 Source1:	%{name}.desktop
 Source2:	http://gtans.sourceforge.net/alpha.figures.gz
@@ -16,7 +16,7 @@ Source4:	http://gtans.sourceforge.net/%{name}-uk.tar.gz
 # Source4-md5:	b323ce20525ffb47c916df698ebc60d5
 Source5:	%{name}-pl.tar.gz
 # Source5-md5:	b9d1fb0b36e63461cf313c972d938572
-URL:		http://altern.org/bwt/
+URL:		http://gtans.sourceforge.net/
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -89,8 +89,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gtanshelp.txt
 %lang(es) %{_datadir}/gtanshelpes.txt
 %lang(fr) %{_datadir}/gtanshelpfr.txt
+%lang(pl) %{_datadir}/gtanshelppl.txt
 %lang(ru) %{_datadir}/gtanshelpru.txt
 %lang(uk) %{_datadir}/gtanshelpuk.txt
-%lang(pl) %{_datadir}/gtanshelppl.txt
 %{_pixmapsdir}/%{name}.png
 %{_applnkdir}/Games/*
