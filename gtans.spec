@@ -2,7 +2,7 @@ Summary:	Tangram puzzle
 Summary(pl):	Uk³adanka - tangramy
 Name:		gtans
 Version:	1.2
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/gtans/%{name}-%{version}.tar.gz
