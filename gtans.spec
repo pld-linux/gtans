@@ -20,12 +20,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_datadir	%{_prefix}/share/gtans
 
 %description
-Move the pieces until they match the figure drawn on the right of
-window.
+The Tangram is a chinese puzzle. The object is to put seven geometric
+shapes together so as to form a given outline. All the pieces must be
+used and are laid next to one another. The pieces are five triangles,
+a square and a parallelogram.
 
 %description -l pl
-Uk³adaj kawa³ki, dopóki nie u³o¿± siê w figurê pokazan± po prawej
-stronie okna.
+Tangramy to chiñska uk³adanka. Celem gry jest u³o¿enie siedmiu figur
+geometrycznych tak, by uzyskaæ zadany kszta³t. Wszystkie kawa³ki musz±
+zostaæ u¿yte oraz u³o¿one obok siebie. Dostêpne figury to piêæ
+trójk±tów, kwadrat i równoleg³obok.
 
 %prep
 %setup -q -a3 -a4 -a5
@@ -57,12 +61,12 @@ cat makefile | sed 's@/%{_prefix}@%$(DESTDIR)%{_prefix}/@' > m.new
 mv -f m.new makefile
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 mkdir $RPM_BUILD_ROOT/usr/share
-mv -f $RPM_BUILD_ROOT/usr/X11R6/share/locale $RPM_BUILD_ROOT/usr/share/
+mv -f $RPM_BUILD_ROOT%{_prefix}/share/locale $RPM_BUILD_ROOT/usr/share/
 
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/figures
 gunzip $RPM_BUILD_ROOT%{_datadir}/figures/*.gz
 
-gzip -9nf AUTHORS 
+gzip -9nf AUTHORS
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install misc/gtans_icon.png $RPM_BUILD_ROOT%{_pixmapsdir}/gtans.png
