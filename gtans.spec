@@ -62,7 +62,9 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Games
 
 cat makefile | sed 's@/%{_prefix}@%$(DESTDIR)%{_prefix}/@' > m.new
 mv -f m.new makefile
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+	
 mkdir $RPM_BUILD_ROOT/usr/share
 mv -f $RPM_BUILD_ROOT%{_prefix}/share/locale $RPM_BUILD_ROOT/usr/share/
 
