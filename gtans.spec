@@ -6,11 +6,16 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://download.sourceforge.net/gtans/%{name}-%{version}.tar.gz
+# Source0-md5:	ac8ee854f8f9c2e36ced43f18b255d51
 Source1:	%{name}.desktop
 Source2:	http://gtans.sourceforge.net/alpha.figures.gz
+# Source2-md5:	4fa32231e56d778f4e0e926ba77c9437
 Source3:	http://gtans.sourceforge.net/%{name}-ru.tar.gz
+# Source3-md5:	20a1c1d25791dafc0891dbcc023446c5
 Source4:	http://gtans.sourceforge.net/%{name}-uk.tar.gz
+# Source4-md5:	b323ce20525ffb47c916df698ebc60d5
 Source5:	%{name}-pl.tar.gz
+# Source5-md5:	b9d1fb0b36e63461cf313c972d938572
 URL:		http://altern.org/bwt/
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
