@@ -66,8 +66,6 @@ mv -f $RPM_BUILD_ROOT%{_prefix}/share/locale $RPM_BUILD_ROOT/usr/share/
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/figures
 gunzip $RPM_BUILD_ROOT%{_datadir}/figures/*.gz
 
-gzip -9nf AUTHORS
-
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games
 install misc/gtans_icon.png $RPM_BUILD_ROOT%{_pixmapsdir}/gtans.png
 
@@ -78,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man6/*
 %dir %{_datadir}
