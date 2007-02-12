@@ -1,5 +1,5 @@
 Summary:	Tangram puzzle
-Summary(pl):	Uk³adanka - tangramy
+Summary(pl.UTF-8):   UkÅ‚adanka - tangramy
 Name:		gtans
 Version:	1.2
 Release:	1
@@ -21,11 +21,11 @@ shapes together so as to form a given outline. All the pieces must be
 used and are laid next to one another. The pieces are five triangles,
 a square and a parallelogram.
 
-%description -l pl
-Tangramy to chiñska uk³adanka. Celem gry jest u³o¿enie siedmiu figur
-geometrycznych tak, by uzyskaæ zadany kszta³t. Wszystkie kawa³ki musz±
-zostaæ u¿yte oraz u³o¿one obok siebie. Dostêpne figury to piêæ
-trójk±tów, kwadrat i równoleg³obok.
+%description -l pl.UTF-8
+Tangramy to chiÅ„ska ukÅ‚adanka. Celem gry jest uÅ‚oÅ¼enie siedmiu figur
+geometrycznych tak, by uzyskaÄ‡ zadany ksztaÅ‚t. Wszystkie kawaÅ‚ki muszÄ…
+zostaÄ‡ uÅ¼yte oraz uÅ‚oÅ¼one obok siebie. DostÄ™pne figury to piÄ™Ä‡
+trÃ³jkÄ…tÃ³w, kwadrat i rÃ³wnolegÅ‚obok.
 
 %prep
 %setup -q
