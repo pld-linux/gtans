@@ -1,5 +1,5 @@
 Summary:	Tangram puzzle
-Summary(pl.UTF-8):   Układanka - tangramy
+Summary(pl.UTF-8):	Układanka - tangramy
 Name:		gtans
 Version:	1.2
 Release:	1
