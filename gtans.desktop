@@ -2,10 +2,9 @@
 Name=gtans
 Comment=Tangram puzzle
 Comment[pl]=Układanka - tangramy
-Icon=gtans.png
+Icon=gtans
 Exec=gtans
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=GTK;Game;LogicGame;
 # vi: encoding=utf-8
