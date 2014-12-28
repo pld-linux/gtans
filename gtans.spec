@@ -9,7 +9,7 @@ Source0:	http://dl.sourceforge.net/gtans/%{name}-%{version}.tar.gz
 # Source0-md5:	067d8bd1d5534b39316bdb4e689a6c40
 Source1:	%{name}.desktop
 URL:		http://gtans.sourceforge.net/
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
